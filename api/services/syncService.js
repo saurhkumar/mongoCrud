@@ -7,8 +7,8 @@ module.exports = {
   start: start,
   stop: stop
 };
-async function start(dbConfig) {
-  await model.start(dbConfig);
+async function start() {
+  await model.start();
 }
 async function stop() {
   await model.close();

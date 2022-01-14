@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const config = require('config');
 
 const mongoHelper = require('../helpers/mongoHelper');
-
 const logger = require('../../logger')(__filename);
 const shortId = require('../helpers/shortId');
 
@@ -38,9 +38,13 @@ module.exports = {
   deleteUser: deleteUser,
   getUsers: getUsers,
   deleteUsers: deleteUsers,
-  start: mongoHelper.connect,
+  start: start,
   close: mongoHelper.close
 };
+
+async function start() {
+  await mongoHelper.connect(config.Database);
+}
 
 async function getUser(id) {
   return await User.findById(id);

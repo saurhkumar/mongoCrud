@@ -6,13 +6,9 @@
     "level": "LOG_LEVEL"
   },
   "Database": {
-    "server": "DATABASE_SERVER",
-    "name": "DATABASE_NAME",
-    "user": "DATABASE_USER",
-    "password": "DATABASE_PASSWORD",
-    "logging": {
-      "__name": "DATABASE_LOGGING",
-      "__format": "json"
-    }
+    "server": "MONGODB_SERVER",
+    "name": "MONGODB_DATABASE_NAME",
+    "user": "MONGODB_USER",
+    "password": "MONGODB_PASSWORD"
   }
 }
